@@ -1,1 +1,10 @@
+def soln(num:list,target:int):
+    dict={}
+    for i,arr in enumerate(num):
+       need=target-arr
+       if need in dict:
+            print ([dict[need],i])
+            break
+       dict[arr]=i
 
+soln([3,3],6)
