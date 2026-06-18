@@ -1,0 +1,11 @@
+def check(word:list[str],char:str):
+    total=0
+    for i in word:
+        for j in i:
+           if j not in char:
+            break
+        else:
+            total+=len(i)
+    return total
+ans=check(input().split(),input())
+print(ans)
