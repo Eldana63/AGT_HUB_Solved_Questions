@@ -1,0 +1,13 @@
+def common(list1:list[str],list2:list[str]):
+    su=0
+    list3=[]
+    for i in list2:
+        if i in list1:
+            index1=list1.index(i)
+            index2=list2.index(i)
+            total= index1+index2
+            if su>total:
+                su=total        
+            list3.append(i)
+    return list3
+print(common(input().split(),input().split()))
