@@ -1,0 +1,23 @@
+class Solution():
+    def duplicate(self, paths:list[str]):
+        dict={}
+        out=[]
+        cont_map=[]
+        for i in paths:
+            parts=i.split()
+            direct=parts[0]
+            for info in paths[1:]:
+                brack_ind=info.index("(")
+                file_name=info[:brack_ind]
+                content=info[brack_ind+1:-1]
+                full_path=direct+"/"+file_name
+
+                if content not in dict:
+                    dict[content]=[]
+                dict[content].append(full_path)
+         for g in dict.values():
+            if len(g)>1:
+                out.append(g)
+sol=Solution()
+put=soln.duplicate()
+print(put)
